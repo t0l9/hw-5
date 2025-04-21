@@ -20,10 +20,8 @@ public class DragAndDrop {
     @Test
     void drugAndDropSelenideTest(){
         open("/drag_and_drop");
-        $("#column-a").dragAndDrop((DragAndDropOptions) $("#column-b"));
-        //Не работает синтаксис
+        $("#column-a").dragAndDrop(DragAndDropOptions.to("#column-b"));
         $("#column-a header").shouldHave(text("B"));
-        sleep(5000);
     }
 
 

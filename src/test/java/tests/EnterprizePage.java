@@ -24,6 +24,5 @@ public class EnterprizePage {
         $(".HeaderMenu").$(withText("Solutions")).hover();
         $$(".HeaderMenu-dropdown-link").findBy(text("Enterprises")).click();
         $(withText("The AI-powered")).shouldBe(appear);
-        sleep(5000);
     }
 }
