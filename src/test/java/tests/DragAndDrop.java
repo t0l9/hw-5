@@ -20,6 +20,8 @@ public class DragAndDrop {
     @Test
     void drugAndDropSelenideTest(){
         open("/drag_and_drop");
+        $("#column-a").shouldHave(text("A"));
+        $("#column-b").shouldHave(text("B"));
         $("#column-a").dragAndDrop(DragAndDropOptions.to("#column-b"));
         $("#column-a header").shouldHave(text("B"));
     }
